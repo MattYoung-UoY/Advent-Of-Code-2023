@@ -22,7 +22,7 @@ public class Main {
 		for(String game: input) {
 			String[] parts = game.split(":");
 			parts[0] = parts[0].replaceAll("Game ", "");
-			parts[1] = parts[1].strip();
+			parts[1] = parts[1].trim();
 			games.add(new Game(Integer.parseInt(parts[0]), parts[1]));
 		}
 		
@@ -53,9 +53,9 @@ public class Main {
 			String[] results = gameResults.split(";");
 			for(String result: results) {
 				int r = 0, g = 0, b = 0;
-				String[] cubes = result.strip().split(",");
+				String[] cubes = result.trim().split(",");
 				for(String cube: cubes) {
-					String[] parts = cube.strip().split(" ");
+					String[] parts = cube.trim().split(" ");
 					switch(parts[1]) {
 					case "red":
 						r += Integer.parseInt(parts[0]);
