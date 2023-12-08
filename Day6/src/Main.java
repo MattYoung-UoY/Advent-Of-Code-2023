@@ -43,7 +43,7 @@ public class Main {
 	}
 	
 	private static long waysToBreakRecord(long t, long r) {
-		return (int) (Math.ceil(((t+Math.sqrt((t*t)-(4*r)))/2)-1)
+		return (long) (Math.ceil(((t+Math.sqrt((t*t)-(4*r)))/2)-1)
 				- Math.floor(((t-Math.sqrt((t*t)-(4*r)))/2)+1)
 				+ 1);
 	}
